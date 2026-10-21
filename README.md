@@ -1,2 +1,2 @@
 # Dunno
-Dunno: The Videogame
+Dunno (i don´t know) ¯\_(ツ)_/¯
