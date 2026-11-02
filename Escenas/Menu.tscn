@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://6a4vj7nfcsjg"]
+
+[ext_resource type="Texture2D" uid="uid://dxbnad2tl3k1v" path="res://Imagenes/Interfaz-DUNNO.png" id="1_iv17o"]
+[ext_resource type="PackedScene" uid="uid://cbnou71alro8o" path="res://Escenas/cameramenu.tscn" id="2_psie0"]
+[ext_resource type="Script" path="res://Script/button_play.gd" id="3_1nlux"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(4, 4)
+texture = ExtResource("1_iv17o")
+
+[node name="Camera2D" parent="." instance=ExtResource("2_psie0")]
+
+[node name="Button_Play" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 472.0
+offset_right = 840.0
+offset_bottom = 572.0
+pivot_offset = Vector2(200, 50)
+theme_override_font_sizes/font_size = 50
+text = "JUGAR"
+script = ExtResource("3_1nlux")
+
+[node name="Button_Settings" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 584.0
+offset_right = 840.0
+offset_bottom = 684.0
+pivot_offset = Vector2(200, 50)
+theme_override_font_sizes/font_size = 50
+text = "OPCIONES"
+
+[connection signal="pressed" from="Button_Play" to="Button_Play" method="_on_pressed"]
